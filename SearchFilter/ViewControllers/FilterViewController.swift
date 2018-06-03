@@ -9,16 +9,21 @@
 import UIKit
 
 class FilterViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupFilterTableView()
         // Do any additional setup after loading the view.
     }
-
+    
+    func setupFilterTableView(){
+        let filterTableView = FilterTableView.init(frame: CGRect.init(x: 0, y: 0, width: Constants.screenWidth, height: Constants.screenHeight))
+        self.view.addSubview(filterTableView)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
 }

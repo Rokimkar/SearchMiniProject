@@ -32,8 +32,13 @@
 		9E80C4F920C42600005A5F29 /* ResponseHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E80C4F820C42600005A5F29 /* ResponseHeader.swift */; };
 		9E80C4FB20C445B5005A5F29 /* SearchFilterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E80C4FA20C445B5005A5F29 /* SearchFilterProtocol.swift */; };
 		9E80C4FD20C448BC005A5F29 /* SearchFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E80C4FC20C448BC005A5F29 /* SearchFilter.swift */; };
-		9E80C4FF20C44BEF005A5F29 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E80C4FE20C44BEF005A5F29 /* FilterViewController.swift */; };
 		9E80C50120C44C31005A5F29 /* FilterTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E80C50020C44C31005A5F29 /* FilterTableView.swift */; };
+		9E80C50420C4536D005A5F29 /* FilterHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E80C50220C4536D005A5F29 /* FilterHeaderTableViewCell.swift */; };
+		9E80C50520C4536D005A5F29 /* FilterHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E80C50320C4536D005A5F29 /* FilterHeaderTableViewCell.xib */; };
+		9E80C50920C457B7005A5F29 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E80C50720C457B7005A5F29 /* FilterViewController.swift */; };
+		9E80C50A20C457B7005A5F29 /* FilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E80C50820C457B7005A5F29 /* FilterViewController.xib */; };
+		9E80C50D20C458D4005A5F29 /* FilterBodyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E80C50B20C458D4005A5F29 /* FilterBodyTableViewCell.swift */; };
+		9E80C50E20C458D4005A5F29 /* FilterBodyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E80C50C20C458D4005A5F29 /* FilterBodyTableViewCell.xib */; };
 		E491A3E1E36760802527EA73 /* Pods_SearchFilter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8EB5CA2A442B92309721899 /* Pods_SearchFilter.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,8 +72,13 @@
 		9E80C4F820C42600005A5F29 /* ResponseHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseHeader.swift; sourceTree = "<group>"; };
 		9E80C4FA20C445B5005A5F29 /* SearchFilterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFilterProtocol.swift; sourceTree = "<group>"; };
 		9E80C4FC20C448BC005A5F29 /* SearchFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFilter.swift; sourceTree = "<group>"; };
-		9E80C4FE20C44BEF005A5F29 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		9E80C50020C44C31005A5F29 /* FilterTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableView.swift; sourceTree = "<group>"; };
+		9E80C50220C4536D005A5F29 /* FilterHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		9E80C50320C4536D005A5F29 /* FilterHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		9E80C50720C457B7005A5F29 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		9E80C50820C457B7005A5F29 /* FilterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterViewController.xib; sourceTree = "<group>"; };
+		9E80C50B20C458D4005A5F29 /* FilterBodyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterBodyTableViewCell.swift; sourceTree = "<group>"; };
+		9E80C50C20C458D4005A5F29 /* FilterBodyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterBodyTableViewCell.xib; sourceTree = "<group>"; };
 		A8EB5CA2A442B92309721899 /* Pods_SearchFilter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SearchFilter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -132,6 +142,7 @@
 			children = (
 				9E80C4E720C34802005A5F29 /* SearchCollectionView.swift */,
 				9E80C50020C44C31005A5F29 /* FilterTableView.swift */,
+				9E80C50620C45375005A5F29 /* TableViewCells */,
 				9E80C4EF20C4137B005A5F29 /* CollectionCells */,
 			);
 			path = Views;
@@ -141,7 +152,8 @@
 			isa = PBXGroup;
 			children = (
 				9E80C4BE20C026B5005A5F29 /* ViewController.swift */,
-				9E80C4FE20C44BEF005A5F29 /* FilterViewController.swift */,
+				9E80C50720C457B7005A5F29 /* FilterViewController.swift */,
+				9E80C50820C457B7005A5F29 /* FilterViewController.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -207,6 +219,17 @@
 				9E80C4DC20C12D89005A5F29 /* JsonSerialiser.swift */,
 			);
 			name = DataManagers;
+			sourceTree = "<group>";
+		};
+		9E80C50620C45375005A5F29 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				9E80C50220C4536D005A5F29 /* FilterHeaderTableViewCell.swift */,
+				9E80C50320C4536D005A5F29 /* FilterHeaderTableViewCell.xib */,
+				9E80C50B20C458D4005A5F29 /* FilterBodyTableViewCell.swift */,
+				9E80C50C20C458D4005A5F29 /* FilterBodyTableViewCell.xib */,
+			);
+			path = TableViewCells;
 			sourceTree = "<group>";
 		};
 		A740B0C6EB5793C89966C721 /* Pods */ = {
@@ -278,10 +301,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E80C50A20C457B7005A5F29 /* FilterViewController.xib in Resources */,
 				9E80C4C720C026B6005A5F29 /* LaunchScreen.storyboard in Resources */,
 				9E80C4F320C413AC005A5F29 /* LoadMoreCollectionViewCell.xib in Resources */,
+				9E80C50E20C458D4005A5F29 /* FilterBodyTableViewCell.xib in Resources */,
 				9E80C4C420C026B6005A5F29 /* Assets.xcassets in Resources */,
 				9E80C4EE20C34E1C005A5F29 /* SearchItemCollectionViewCell.xib in Resources */,
+				9E80C50520C4536D005A5F29 /* FilterHeaderTableViewCell.xib in Resources */,
 				9E80C4C220C026B5005A5F29 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,7 +360,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E80C4FF20C44BEF005A5F29 /* FilterViewController.swift in Sources */,
 				9E80C4BF20C026B5005A5F29 /* ViewController.swift in Sources */,
 				9E80C4DF20C1725E005A5F29 /* Cache.swift in Sources */,
 				9E80C4E220C2E9F6005A5F29 /* TokoProduct.swift in Sources */,
@@ -342,8 +367,11 @@
 				9E80C50120C44C31005A5F29 /* FilterTableView.swift in Sources */,
 				9E80C4E820C34802005A5F29 /* SearchCollectionView.swift in Sources */,
 				9E80C4FD20C448BC005A5F29 /* SearchFilter.swift in Sources */,
+				9E80C50D20C458D4005A5F29 /* FilterBodyTableViewCell.swift in Sources */,
+				9E80C50920C457B7005A5F29 /* FilterViewController.swift in Sources */,
 				9E80C4D720C11A78005A5F29 /* RouterManager.swift in Sources */,
 				9E80C4E420C2ECE4005A5F29 /* ResponseStatus.swift in Sources */,
+				9E80C50420C4536D005A5F29 /* FilterHeaderTableViewCell.swift in Sources */,
 				9E80C4F920C42600005A5F29 /* ResponseHeader.swift in Sources */,
 				9E80C4D520C05D60005A5F29 /* SearchRequestEndPoint.swift in Sources */,
 				9E80C4DD20C12D89005A5F29 /* JsonSerialiser.swift in Sources */,

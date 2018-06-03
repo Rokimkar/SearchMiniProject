@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SearchFilter/Helpers/SearchDataService.swift"
-            timestampString = "549735004.832943"
+            timestampString = "549738585.7088259"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "fetchSearchResults(query:isLoadMore:success:failure:)"
             landmarkType = "7">
          </BreakpointContent>

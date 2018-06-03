@@ -26,10 +26,11 @@ class ViewController: UIViewController {
     }
     
     func setupSearchCollectionView(){
+        let collectionViewFrame = CGRect.init(x: self.view.frame.origin.x, y: self.view.frame.origin.y, width: Constants.screenWidth, height: Constants.screenHeight - 100)
         if let _ = searchCollectionView{
-            searchCollectionView?.frame = self.view.frame
+            searchCollectionView?.frame = collectionViewFrame
         }else{
-            searchCollectionView = SearchCollectionView.init(with: self.view.frame)
+            searchCollectionView = SearchCollectionView.init(with: collectionViewFrame)
             searchCollectionView?.dataDelegate = self
             self.view.addSubview(searchCollectionView!)
         }
@@ -56,7 +57,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func filterButtonPresssed(_ sender: Any) {
-        
+        let filterVC = FilterViewController.init(nibName: "FilterViewController", bundle: nil)
+        self.present(filterVC, animated: true, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {

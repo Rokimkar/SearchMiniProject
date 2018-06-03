@@ -17,14 +17,35 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YDF-vf-9aG">
+                                <rect key="frame" x="0.0" y="614" width="375" height="53"/>
+                                <color key="backgroundColor" red="0.0014213894358257027" green="0.84432503172588835" blue="0.11690525810634396" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="TYE-bs-0Mt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
+                                <state key="normal" title="Filter">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="filterButtonPresssed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cnW-d5-lDX"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="YDF-vf-9aG" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="JSH-6P-Zjv"/>
+                            <constraint firstItem="YDF-vf-9aG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="VNv-FU-ZEC"/>
+                            <constraint firstItem="YDF-vf-9aG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kg2-ZG-wph"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="f43-Vb-zjo"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="788" y="-564"/>
+            <point key="canvasLocation" x="788" y="-564.46776611694156"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="INF-4P-muD">

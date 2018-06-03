@@ -12,6 +12,7 @@ typealias searchDataResponse = (_ data : [TokoProduct],_ isLoadMoreAvailble : Bo
 
 class SearchDataSevice{
     
+    var searchFilter = SearchFilter()
     var query : String
     var minPrice : Int
     var maxPrice : Int
@@ -30,6 +31,11 @@ class SearchDataSevice{
         self.fshop = fshop
         self.start = start
         self.row = row
+        searchFilter.minPrice = minPrice
+        searchFilter.maxPrice = maxPrice
+        searchFilter.fshop = fshop
+        searchFilter.wholeSale = wholeSale
+        searchFilter.official = official
     }
     
     func fetchSearchResults(query : String,isLoadMore : Bool,success : @escaping searchDataResponse,failure: @escaping (Error)->Void){

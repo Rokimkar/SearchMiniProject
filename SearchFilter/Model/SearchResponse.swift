@@ -10,11 +10,13 @@ import Foundation
 
 class SearchResponse : Codable{
     var status : ResponseStatus
+    var header : ResponseHeader
     var data : [TokoProduct]
     
     public enum CodingKeys : String,CodingKey{
         case status = "status"
         case data = "data"
+        case header = "header"
     }
     
     func encode (to encoder : Encoder) throws{
@@ -22,6 +24,7 @@ class SearchResponse : Codable{
         
         try container.encode(status, forKey: .status)
         try container.encode(data, forKey: .data)
+        try container.encode(header, forKey: .header)
     }
     
     required init(from decoder : Decoder) throws {
@@ -29,5 +32,6 @@ class SearchResponse : Codable{
         
         status = try container.decode(ResponseStatus.self, forKey: .status)
         data = try container.decode([TokoProduct].self, forKey: .data)
+        header = try container.decode(ResponseHeader.self, forKey: .header)
     }
 }

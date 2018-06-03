@@ -43,4 +43,15 @@ class NetworkRouter{
         }
         return requestMethod
     }
+    
+    
+    class func bindImage(for imageUrl : String,with imageView : UIImageView){
+        Alamofire.request(imageUrl, method: HTTPMethod.get, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseData { (responseData) in
+            if let imageData = responseData.result.value{
+                DispatchQueue.main.async {
+                    imageView.image = UIImage.init(data: imageData)
+                }
+            }
+        }
+    }
 }

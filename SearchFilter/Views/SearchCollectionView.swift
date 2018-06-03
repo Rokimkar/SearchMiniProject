@@ -8,9 +8,15 @@
 
 import UIKit
 
+protocol SearchCollectionViewProtocol {
+    func loadMoreData()
+}
+
 class SearchCollectionView: UICollectionView {
     
+    var dataDelegate : SearchCollectionViewProtocol?
     var searchResults : [TokoProduct]?
+    var isLoadMore = false
     
     init(with frame : CGRect){
         let layout = UICollectionViewFlowLayout.init()
@@ -23,6 +29,7 @@ class SearchCollectionView: UICollectionView {
     }
     
     func commonInit(){
+        self.backgroundColor = UIColor.darkGray
         registerViewItems()
         self.dataSource = self
         self.delegate = self
@@ -30,6 +37,7 @@ class SearchCollectionView: UICollectionView {
     
     func registerViewItems(){
         self.register(UINib.init(nibName: "SearchItemCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "SearchItemCollectionViewCell")
+        self.register(UINib.init(nibName: "LoadMoreCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "LoadMoreCollectionViewCell")
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -48,12 +56,30 @@ extension SearchCollectionView : UICollectionViewDataSource,UICollectionViewDele
         if let productCount = searchResults?.count{
             numberOfRows = productCount
         }
+        if isLoadMore == true{
+            numberOfRows+=1
+        }
         return numberOfRows
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if searchResults?.count == indexPath.row{
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "LoadMoreCollectionViewCell", for: indexPath) as! LoadMoreCollectionViewCell
+            cell.bindData()
+            return cell
+        }
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchItemCollectionViewCell", for: indexPath) as! SearchItemCollectionViewCell
         cell.bindData(for: searchResults![indexPath.row])
         return cell
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let visibleCells = self.visibleCells
+        for cell in visibleCells{
+            if cell.isKind(of: LoadMoreCollectionViewCell.self){
+                dataDelegate?.loadMoreData()
+            }
+        }
+        
     }
 }

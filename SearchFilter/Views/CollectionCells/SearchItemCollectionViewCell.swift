@@ -24,6 +24,7 @@ class SearchItemCollectionViewCell: UICollectionViewCell {
     func bindData(for searchItem : TokoProduct) {
         itemTitleLabel.text = searchItem.name
         itemPriceLabel.text = searchItem.price
+        NetworkRouter.bindImage(for: searchItem.imageUrl ?? "", with: itemImageView)
         updateImageViewConstraints()
     }
     

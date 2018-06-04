@@ -58,6 +58,7 @@ class ViewController: UIViewController {
     
     @IBAction func filterButtonPresssed(_ sender: Any) {
         let filterVC = FilterViewController.init(nibName: "FilterViewController", bundle: nil)
+        filterVC.filterChangeDelegate = self
         self.present(filterVC, animated: true, completion: nil)
     }
     
@@ -69,6 +70,17 @@ class ViewController: UIViewController {
 
 extension ViewController : SearchCollectionViewProtocol{
     func loadMoreData() {
+        fetchSearchResults(isLoadMore: true)
+    }
+}
+
+extension ViewController : FilterChangeProtocol{
+    func applyFilterChanges(with filter: SearchFilter) {
+        searchDataService?.searchFilter = filter
+        searchDataService?.start = -10
+        searchCollectionView?.searchResults = nil
+        searchCollectionView?.isLoadMore = true
+        searchCollectionView?.reloadData()
         fetchSearchResults(isLoadMore: true)
     }
 }

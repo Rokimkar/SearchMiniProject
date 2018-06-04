@@ -8,8 +8,13 @@
 
 import UIKit
 
+protocol FilterChangeProtocol {
+    func applyFilterChanges(with filter : SearchFilter)
+}
+
 class FilterViewController: UIViewController {
     
+    var filterChangeDelegate : FilterChangeProtocol?
     var searchFilter = SearchFilter()
     
     override func viewDidLoad() {
@@ -25,6 +30,7 @@ class FilterViewController: UIViewController {
     }
     
     @IBAction func applyButtonClicked(_ sender: Any) {
+        filterChangeDelegate?.applyFilterChanges(with: searchFilter)
         self.dismiss(animated: true, completion: nil)
     }
     

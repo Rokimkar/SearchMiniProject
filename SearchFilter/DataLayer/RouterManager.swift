@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Disk
 
 public typealias responseData<T:Codable> = (T)->Void
 
@@ -59,6 +60,28 @@ class RouterManager{
                 })
             }
             break
+        }
+    }
+    
+    func bindImage(for imageUrl : String,with imageView : UIImageView){
+        do{
+            let cacheData = try Disk.retrieve(imageUrl, from: .documents, as: Cache.self)
+            DispatchQueue.main.async {
+                imageView.image = UIImage.init(data: cacheData.data)
+            }
+        }catch{
+            NetworkRouter.fetchData(for: imageUrl) { (imageData) in
+                DispatchQueue.main.async {
+                    imageView.image = UIImage.init(data: imageData)
+                }
+                do{
+                    let cache = Cache.init(data: imageData)
+                    try Disk.save(cache, to: .documents, as: imageUrl)
+                    
+                }catch{
+                    //Handle error.
+                }
+            }
         }
     }
     

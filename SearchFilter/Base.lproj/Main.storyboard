@@ -10,10 +10,41 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Search View Controller-->
+        <scene sceneID="4OU-nS-kEn">
+            <objects>
+                <viewController id="8If-my-Zxk" customClass="SearchViewController" customModule="SearchFilter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="X40-Ph-Mtg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="RIG-9Y-NCY">
+                                <rect key="frame" x="0.0" y="305" width="375" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="fbR-aW-sPO"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RIG-9Y-NCY" firstAttribute="trailing" secondItem="RIb-Mk-fgx" secondAttribute="trailing" id="KDD-Cc-2eN"/>
+                            <constraint firstItem="RIG-9Y-NCY" firstAttribute="leading" secondItem="RIb-Mk-fgx" secondAttribute="leading" id="PhG-p5-bps"/>
+                            <constraint firstItem="RIG-9Y-NCY" firstAttribute="centerX" secondItem="X40-Ph-Mtg" secondAttribute="centerX" id="Qmu-ld-gHJ"/>
+                            <constraint firstItem="RIG-9Y-NCY" firstAttribute="centerY" secondItem="X40-Ph-Mtg" secondAttribute="centerY" id="iYV-ef-agz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RIb-Mk-fgx"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ABF-hw-v0g"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JwD-ce-p4m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="807" y="-564"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SearchFilter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="SearchFilter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -45,7 +76,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="788" y="-564.46776611694156"/>
+            <point key="canvasLocation" x="1514" y="-564"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="INF-4P-muD">
@@ -58,7 +89,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="YrK-65-cxN"/>
+                        <segue destination="8If-my-Zxk" kind="relationship" relationship="rootViewController" id="DDQ-U6-fmU"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yci-9V-sZd" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -12,10 +12,11 @@ class ViewController: UIViewController {
     
     var searchCollectionView : SearchCollectionView?
     var searchDataService : SearchDataSevice?
+    var query : String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        searchDataService = SearchDataSevice.init(query: "samsung", minPrice: 1000, maxPrice: 100000, wholeSale: true, official: true, fshop: 2, start:-10 , row: 10)
+        searchDataService = SearchDataSevice.init(query: query!, minPrice: 1000, maxPrice: 100000, wholeSale: true, official: true, fshop: 2, start:-10 , row: 10)
         fetchSearchResults(isLoadMore: true)
         // Do any additional setup after loading the view, typically from a nib.
     }

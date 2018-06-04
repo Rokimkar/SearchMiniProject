@@ -42,6 +42,7 @@
 		9E80C51120C5593B005A5F29 /* ShopTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E80C50F20C5593B005A5F29 /* ShopTypeTableViewCell.swift */; };
 		9E80C51220C5593B005A5F29 /* ShopTypeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E80C51020C5593B005A5F29 /* ShopTypeTableViewCell.xib */; };
 		9E80C51420C58C70005A5F29 /* FilterPageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E80C51320C58C70005A5F29 /* FilterPageProtocol.swift */; };
+		9E80C51620C5CE36005A5F29 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E80C51520C5CE36005A5F29 /* SearchViewController.swift */; };
 		E491A3E1E36760802527EA73 /* Pods_SearchFilter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8EB5CA2A442B92309721899 /* Pods_SearchFilter.framework */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +86,7 @@
 		9E80C50F20C5593B005A5F29 /* ShopTypeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopTypeTableViewCell.swift; sourceTree = "<group>"; };
 		9E80C51020C5593B005A5F29 /* ShopTypeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShopTypeTableViewCell.xib; sourceTree = "<group>"; };
 		9E80C51320C58C70005A5F29 /* FilterPageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterPageProtocol.swift; sourceTree = "<group>"; };
+		9E80C51520C5CE36005A5F29 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		A8EB5CA2A442B92309721899 /* Pods_SearchFilter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SearchFilter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -157,6 +159,7 @@
 		9E80C4CF20C059B3005A5F29 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				9E80C51520C5CE36005A5F29 /* SearchViewController.swift */,
 				9E80C4BE20C026B5005A5F29 /* ViewController.swift */,
 				9E80C50720C457B7005A5F29 /* FilterViewController.swift */,
 				9E80C50820C457B7005A5F29 /* FilterViewController.xib */,
@@ -375,6 +378,7 @@
 				9E80C4BF20C026B5005A5F29 /* ViewController.swift in Sources */,
 				9E80C4DF20C1725E005A5F29 /* Cache.swift in Sources */,
 				9E80C4E220C2E9F6005A5F29 /* TokoProduct.swift in Sources */,
+				9E80C51620C5CE36005A5F29 /* SearchViewController.swift in Sources */,
 				9E80C4D320C05BB5005A5F29 /* EndPointType.swift in Sources */,
 				9E80C50120C44C31005A5F29 /* FilterTableView.swift in Sources */,
 				9E80C4E820C34802005A5F29 /* SearchCollectionView.swift in Sources */,

@@ -59,6 +59,7 @@ class ViewController: UIViewController {
     @IBAction func filterButtonPresssed(_ sender: Any) {
         let filterVC = FilterViewController.init(nibName: "FilterViewController", bundle: nil)
         filterVC.filterChangeDelegate = self
+        filterVC.searchFilter = searchDataService?.searchFilter ?? SearchFilter()
         self.present(filterVC, animated: true, completion: nil)
     }
     

@@ -18,6 +18,8 @@ class FilterTableView: UITableView {
     }
     
     func commonInit(){
+        self.backgroundColor = UIColor.init(red: 241/255, green: 241/255, blue: 241/255, alpha: 1)
+        self.separatorStyle = .none
         self.dataSource = self
         self.delegate = self
         registerCells()
@@ -44,16 +46,23 @@ extension FilterTableView : UITableViewDataSource,UITableViewDelegate{
             let cell = tableView.dequeueReusableCell(withIdentifier: "FilterHeaderTableViewCell", for: indexPath) as! FilterHeaderTableViewCell
             cell.filterPageDelegate = parentController
             cell.buttonPressedDelegate = self
+            cell.selectionStyle = .none
             return cell
         }
         if indexPath.row == 1{
             let cell = tableView.dequeueReusableCell(withIdentifier: "FilterBodyTableViewCell", for: indexPath) as! FilterBodyTableViewCell
             cell.filterPageDelegate = parentController
+            if let filter = parentController?.searchFilter{
+                cell.bindData(with: filter)
+            }
+            
+            cell.selectionStyle = .none
             return cell
         }
         if indexPath.row == 2{
             let cell = tableView.dequeueReusableCell(withIdentifier: "ShopTypeTableViewCell", for: indexPath) as! ShopTypeTableViewCell
             cell.filterPageDelegate = parentController
+            cell.selectionStyle = .none
             return cell
         }
         return UITableViewCell.init()
@@ -62,13 +71,13 @@ extension FilterTableView : UITableViewDataSource,UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         var height = 50.0
         if indexPath.row == 0{
-            height = 100.0
+            height = 150.0
         }
         if indexPath.row == 1{
-            height = 180.0
+            height = 280.0
         }
         if indexPath.row == 2{
-            height = 100.0
+            height = 170.0
         }
         return CGFloat(height)
     }

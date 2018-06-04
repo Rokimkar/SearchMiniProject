@@ -9,8 +9,8 @@
 import Foundation
 
 struct DefaultValues{
-    var minPrice = 1000
-    var maxPrice = 100000
+    var minPrice = 100
+    var maxPrice = 10000
     var wholeSale = true
     var official = true
     var fshop = 2

@@ -16,6 +16,7 @@ class FilterViewController: UIViewController {
     
     var filterChangeDelegate : FilterChangeProtocol?
     var searchFilter = SearchFilter()
+    var filterTableView : FilterTableView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,9 +25,9 @@ class FilterViewController: UIViewController {
     }
     
     func setupFilterTableView(){
-        let filterTableView = FilterTableView.init(frame: CGRect.init(x: 0, y: 0, width: Constants.screenWidth, height: Constants.screenHeight-85))
-        filterTableView.parentController = self
-        self.view.addSubview(filterTableView)
+        filterTableView = FilterTableView.init(frame: CGRect.init(x: 0, y: 0, width: Constants.screenWidth, height: Constants.screenHeight-85))
+        filterTableView?.parentController = self
+        self.view.addSubview(filterTableView!)
     }
     
     @IBAction func applyButtonClicked(_ sender: Any) {
@@ -45,6 +46,7 @@ extension FilterViewController : FilterPageProtocol{
     
     func reset() {
         searchFilter = SearchFilter()
+        filterTableView?.reloadData()
     }
     
     func minPriceChanged(value: Int) {

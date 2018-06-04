@@ -22,7 +22,6 @@ class FilterHeaderTableViewCell: UITableViewCell {
         // Initialization code
     }
 
-
     @IBAction func closeButtonPressed(_ sender: Any) {
         buttonPressedDelegate?.closeButtonPressed()
     }

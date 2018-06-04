@@ -29,9 +29,15 @@ class FilterBodyTableViewCell: UITableViewCell {
         rangeSlider.setMinValue(100, maxValue: 80000)
         rangeSlider.minimumDistance = 100
         rangeSlider.addTarget(self, action: #selector(rangeSliderValueDidChange), for: .valueChanged)
-        rangeSliderValueDidChange()
         minPriceLabel.numberOfLines = 0
         maxPriceLabel.numberOfLines = 0
+    }
+    
+    func bindData(with filter : SearchFilter){
+        updateMinPriceLabel(value: CGFloat(filter.minPrice))
+        updateMaxPriceLabel(value: CGFloat(filter.maxPrice))
+        rangeSlider.setLeftValue(CGFloat(filter.minPrice), rightValue: CGFloat(filter.maxPrice))
+        wholeSaleSwitch.setOn(filter.wholeSale, animated: true)
     }
     
     @objc func rangeSliderValueDidChange(){

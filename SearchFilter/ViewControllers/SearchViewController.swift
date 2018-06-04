@@ -10,15 +10,15 @@ import UIKit
 
 class SearchViewController: UIViewController {
 
+    @IBOutlet weak var searchBar: UISearchBar!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        searchBar.delegate = self
         // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        launchSearch(query: "Samsung")
     }
     
     func launchSearch(query : String){
@@ -34,3 +34,14 @@ class SearchViewController: UIViewController {
     }
 
 }
+
+extension SearchViewController : UISearchBarDelegate{
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        if let searchText = searchBar.text{
+            if searchText != ""{
+                launchSearch(query: searchText)
+            }
+        }
+    }
+}
+

@@ -18,6 +18,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         searchDataService = SearchDataSevice.init(query: query!, minPrice: 1000, maxPrice: 100000, wholeSale: true, official: true, fshop: 2, start:-10 , row: 10)
         fetchSearchResults(isLoadMore: true)
+        self.title = query
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -38,7 +39,7 @@ class ViewController: UIViewController {
     }
 
     func fetchSearchResults(isLoadMore : Bool){
-        searchDataService?.fetchSearchResults(query: "Samsung", isLoadMore: isLoadMore, success: { (productsArray,isLoadMoreAvailable) in
+        searchDataService?.fetchSearchResults(query: query!, isLoadMore: isLoadMore, success: { (productsArray,isLoadMoreAvailable) in
             if let _ = self.searchCollectionView{
                 
             }else{

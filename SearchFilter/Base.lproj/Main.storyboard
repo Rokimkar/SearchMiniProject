@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="RIG-9Y-NCY">
+                            <searchBar contentMode="redraw" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="RIG-9Y-NCY">
                                 <rect key="frame" x="0.0" y="305" width="375" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="fbR-aW-sPO"/>
@@ -36,6 +36,9 @@
                         <viewLayoutGuide key="safeArea" id="RIb-Mk-fgx"/>
                     </view>
                     <navigationItem key="navigationItem" id="ABF-hw-v0g"/>
+                    <connections>
+                        <outlet property="searchBar" destination="RIG-9Y-NCY" id="xtW-XE-nAH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JwD-ce-p4m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

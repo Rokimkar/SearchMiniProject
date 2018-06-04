@@ -78,7 +78,7 @@ extension ViewController : FilterChangeProtocol{
     func applyFilterChanges(with filter: SearchFilter) {
         searchDataService?.searchFilter = filter
         searchDataService?.start = -10
-        searchCollectionView?.searchResults = nil
+        searchCollectionView?.searchResults = []
         searchCollectionView?.isLoadMore = true
         searchCollectionView?.reloadData()
         fetchSearchResults(isLoadMore: true)

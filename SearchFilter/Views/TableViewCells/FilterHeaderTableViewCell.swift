@@ -8,9 +8,14 @@
 
 import UIKit
 
+protocol ButtonPressedProtocol {
+    func closeButtonPressed()
+}
+
 class FilterHeaderTableViewCell: UITableViewCell {
     
     var filterPageDelegate : FilterPageProtocol?
+    var buttonPressedDelegate : ButtonPressedProtocol?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,7 +24,7 @@ class FilterHeaderTableViewCell: UITableViewCell {
 
 
     @IBAction func closeButtonPressed(_ sender: Any) {
-        
+        buttonPressedDelegate?.closeButtonPressed()
     }
     
     @IBAction func resetButtonPressed(_ sender: Any) {

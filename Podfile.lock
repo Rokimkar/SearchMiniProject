@@ -1,20 +1,24 @@
 PODS:
   - Alamofire (4.7.2)
   - Disk (0.3.3)
+  - MARKRangeSlider (1.1.1)
 
 DEPENDENCIES:
   - Alamofire
   - Disk
+  - MARKRangeSlider
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - Disk
+    - MARKRangeSlider
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
   Disk: d1f55cd61f6ca20f368232d0c6e37e3c3dfcb63e
+  MARKRangeSlider: ef7e1fe84d22996f47fd72dcb8de50b9410aac47
 
-PODFILE CHECKSUM: dbab41c04d260825641b614e0641e4d1c15561c3
+PODFILE CHECKSUM: 00b68e4a9cdf5bafc40419b87372657716e6c863
 
 COCOAPODS: 1.5.2

@@ -21,9 +21,9 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="miC-e4-SAX">
-                        <rect key="frame" x="16" y="11" width="78" height="42"/>
+                        <rect key="frame" x="16" y="11" width="130" height="42"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="78" id="6Gk-iP-Dsy"/>
+                            <constraint firstAttribute="width" constant="130" id="6Gk-iP-Dsy"/>
                             <constraint firstAttribute="height" constant="42" id="m7u-50-k55"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -31,10 +31,10 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RaS-nh-1FG">
-                        <rect key="frame" x="226" y="11" width="78" height="42"/>
+                        <rect key="frame" x="174" y="11" width="130" height="42"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="42" id="TZp-O0-gKx"/>
-                            <constraint firstAttribute="width" constant="78" id="t06-ud-oRD"/>
+                            <constraint firstAttribute="width" constant="130" id="t06-ud-oRD"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
@@ -59,15 +59,25 @@
                             <action selector="wholeSaleSwitchChanged:" destination="KGk-i7-Jjw" eventType="valueChanged" id="8ST-Wk-48T"/>
                         </connections>
                     </switch>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n7g-JH-wzJ" customClass="MARKRangeSlider">
+                        <rect key="frame" x="16" y="61" width="288" height="61"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="61" id="hnd-4g-fTs"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="RaS-nh-1FG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="1pf-hY-AV3"/>
+                    <constraint firstItem="n7g-JH-wzJ" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="6Z9-66-FcV"/>
                     <constraint firstItem="miC-e4-SAX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="9Gh-md-cHF"/>
                     <constraint firstAttribute="trailing" secondItem="68A-IN-n7U" secondAttribute="trailing" constant="16" id="KDZ-Zb-7l3"/>
                     <constraint firstItem="RaS-nh-1FG" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="Kpv-M1-ypA"/>
                     <constraint firstItem="Uge-Ls-wSH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Pcx-RV-Dvb"/>
                     <constraint firstAttribute="bottom" secondItem="68A-IN-n7U" secondAttribute="bottom" constant="5.5" id="SXf-L7-5e2"/>
+                    <constraint firstItem="n7g-JH-wzJ" firstAttribute="top" secondItem="miC-e4-SAX" secondAttribute="bottom" constant="8" id="k1p-Sq-zzV"/>
                     <constraint firstItem="Uge-Ls-wSH" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="r8j-BX-nZw"/>
+                    <constraint firstItem="n7g-JH-wzJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="uRP-5r-lg3"/>
                     <constraint firstItem="miC-e4-SAX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="v2c-kJ-1xv"/>
                 </constraints>
             </tableViewCellContentView>
@@ -75,6 +85,7 @@
             <connections>
                 <outlet property="maxPriceLabel" destination="RaS-nh-1FG" id="Xqx-Di-6Ng"/>
                 <outlet property="minPriceLabel" destination="miC-e4-SAX" id="Fjo-a7-V2N"/>
+                <outlet property="rangeSlider" destination="n7g-JH-wzJ" id="rwE-Az-d4U"/>
                 <outlet property="wholeSaleLabel" destination="Uge-Ls-wSH" id="Hcv-0z-4sh"/>
                 <outlet property="wholeSaleSwitch" destination="68A-IN-n7U" id="bdr-ji-ux0"/>
             </connections>

@@ -8,4 +8,5 @@ target 'SearchFilter' do
   # Pods for SearchFilter
   pod 'Alamofire'
   pod 'Disk'
+  pod 'MARKRangeSlider'
 end

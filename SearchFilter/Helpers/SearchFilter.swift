@@ -9,5 +9,5 @@
 import Foundation
 
 class SearchFilter : SearchFilterProtocol{
-    
+    var defaultValues =  DefaultValues()
 }

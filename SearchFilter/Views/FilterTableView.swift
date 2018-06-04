@@ -43,6 +43,7 @@ extension FilterTableView : UITableViewDataSource,UITableViewDelegate{
         if indexPath.row == 0{
             let cell = tableView.dequeueReusableCell(withIdentifier: "FilterHeaderTableViewCell", for: indexPath) as! FilterHeaderTableViewCell
             cell.filterPageDelegate = parentController
+            cell.buttonPressedDelegate = self
             return cell
         }
         if indexPath.row == 1{
@@ -64,11 +65,17 @@ extension FilterTableView : UITableViewDataSource,UITableViewDelegate{
             height = 100.0
         }
         if indexPath.row == 1{
-            height = 100.0
+            height = 180.0
         }
         if indexPath.row == 2{
             height = 100.0
         }
         return CGFloat(height)
+    }
+}
+
+extension FilterTableView:ButtonPressedProtocol{
+    func closeButtonPressed(){
+        parentController?.dismiss(animated: true, completion: nil)
     }
 }

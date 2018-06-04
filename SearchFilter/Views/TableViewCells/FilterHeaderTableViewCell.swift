@@ -9,6 +9,8 @@
 import UIKit
 
 class FilterHeaderTableViewCell: UITableViewCell {
+    
+    var filterPageDelegate : FilterPageProtocol?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -17,9 +19,13 @@ class FilterHeaderTableViewCell: UITableViewCell {
 
 
     @IBAction func closeButtonPressed(_ sender: Any) {
+        
     }
+    
     @IBAction func resetButtonPressed(_ sender: Any) {
+        filterPageDelegate?.reset()
     }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

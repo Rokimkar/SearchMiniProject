@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SearchFilter/Helpers/SearchDataService.swift"
-            timestampString = "549738585.7088259"
+            filePath = "SearchFilter/ViewControllers/FilterViewController.swift"
+            timestampString = "549822952.759585"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "fetchSearchResults(query:isLoadMore:success:failure:)"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "shopTypeChanged(type:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

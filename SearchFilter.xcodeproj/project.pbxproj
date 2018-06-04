@@ -39,6 +39,9 @@
 		9E80C50A20C457B7005A5F29 /* FilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E80C50820C457B7005A5F29 /* FilterViewController.xib */; };
 		9E80C50D20C458D4005A5F29 /* FilterBodyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E80C50B20C458D4005A5F29 /* FilterBodyTableViewCell.swift */; };
 		9E80C50E20C458D4005A5F29 /* FilterBodyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E80C50C20C458D4005A5F29 /* FilterBodyTableViewCell.xib */; };
+		9E80C51120C5593B005A5F29 /* ShopTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E80C50F20C5593B005A5F29 /* ShopTypeTableViewCell.swift */; };
+		9E80C51220C5593B005A5F29 /* ShopTypeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E80C51020C5593B005A5F29 /* ShopTypeTableViewCell.xib */; };
+		9E80C51420C58C70005A5F29 /* FilterPageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E80C51320C58C70005A5F29 /* FilterPageProtocol.swift */; };
 		E491A3E1E36760802527EA73 /* Pods_SearchFilter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8EB5CA2A442B92309721899 /* Pods_SearchFilter.framework */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +82,9 @@
 		9E80C50820C457B7005A5F29 /* FilterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterViewController.xib; sourceTree = "<group>"; };
 		9E80C50B20C458D4005A5F29 /* FilterBodyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterBodyTableViewCell.swift; sourceTree = "<group>"; };
 		9E80C50C20C458D4005A5F29 /* FilterBodyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterBodyTableViewCell.xib; sourceTree = "<group>"; };
+		9E80C50F20C5593B005A5F29 /* ShopTypeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopTypeTableViewCell.swift; sourceTree = "<group>"; };
+		9E80C51020C5593B005A5F29 /* ShopTypeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShopTypeTableViewCell.xib; sourceTree = "<group>"; };
+		9E80C51320C58C70005A5F29 /* FilterPageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterPageProtocol.swift; sourceTree = "<group>"; };
 		A8EB5CA2A442B92309721899 /* Pods_SearchFilter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SearchFilter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -164,6 +170,7 @@
 				9E80C4E920C3492C005A5F29 /* Constants.swift */,
 				9E80C4F620C415E8005A5F29 /* SearchDataService.swift */,
 				9E80C4FA20C445B5005A5F29 /* SearchFilterProtocol.swift */,
+				9E80C51320C58C70005A5F29 /* FilterPageProtocol.swift */,
 				9E80C4FC20C448BC005A5F29 /* SearchFilter.swift */,
 			);
 			path = Helpers;
@@ -228,6 +235,8 @@
 				9E80C50320C4536D005A5F29 /* FilterHeaderTableViewCell.xib */,
 				9E80C50B20C458D4005A5F29 /* FilterBodyTableViewCell.swift */,
 				9E80C50C20C458D4005A5F29 /* FilterBodyTableViewCell.xib */,
+				9E80C50F20C5593B005A5F29 /* ShopTypeTableViewCell.swift */,
+				9E80C51020C5593B005A5F29 /* ShopTypeTableViewCell.xib */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -301,6 +310,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E80C51220C5593B005A5F29 /* ShopTypeTableViewCell.xib in Resources */,
 				9E80C50A20C457B7005A5F29 /* FilterViewController.xib in Resources */,
 				9E80C4C720C026B6005A5F29 /* LaunchScreen.storyboard in Resources */,
 				9E80C4F320C413AC005A5F29 /* LoadMoreCollectionViewCell.xib in Resources */,
@@ -370,6 +380,7 @@
 				9E80C50D20C458D4005A5F29 /* FilterBodyTableViewCell.swift in Sources */,
 				9E80C50920C457B7005A5F29 /* FilterViewController.swift in Sources */,
 				9E80C4D720C11A78005A5F29 /* RouterManager.swift in Sources */,
+				9E80C51120C5593B005A5F29 /* ShopTypeTableViewCell.swift in Sources */,
 				9E80C4E420C2ECE4005A5F29 /* ResponseStatus.swift in Sources */,
 				9E80C50420C4536D005A5F29 /* FilterHeaderTableViewCell.swift in Sources */,
 				9E80C4F920C42600005A5F29 /* ResponseHeader.swift in Sources */,
@@ -381,6 +392,7 @@
 				9E80C4E620C2EE82005A5F29 /* SearchResponse.swift in Sources */,
 				9E80C4BD20C026B5005A5F29 /* AppDelegate.swift in Sources */,
 				9E80C4DB20C11ADE005A5F29 /* CacheRouter.swift in Sources */,
+				9E80C51420C58C70005A5F29 /* FilterPageProtocol.swift in Sources */,
 				9E80C4ED20C34E1C005A5F29 /* SearchItemCollectionViewCell.swift in Sources */,
 				9E80C4D920C11A88005A5F29 /* NetworkRouter.swift in Sources */,
 				9E80C4F720C415E8005A5F29 /* SearchDataService.swift in Sources */,

@@ -10,6 +10,8 @@ import UIKit
 
 class FilterViewController: UIViewController {
     
+    var searchFilter = SearchFilter()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupFilterTableView()
@@ -17,13 +19,52 @@ class FilterViewController: UIViewController {
     }
     
     func setupFilterTableView(){
-        let filterTableView = FilterTableView.init(frame: CGRect.init(x: 0, y: 0, width: Constants.screenWidth, height: Constants.screenHeight))
+        let filterTableView = FilterTableView.init(frame: CGRect.init(x: 0, y: 0, width: Constants.screenWidth, height: Constants.screenHeight-85))
+        filterTableView.parentController = self
         self.view.addSubview(filterTableView)
+    }
+    
+    @IBAction func applyButtonClicked(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+}
+
+extension FilterViewController : FilterPageProtocol{
+    
+    func reset() {
+        searchFilter = SearchFilter()
+    }
+    
+    func minPriceChanged(value: Int) {
+        searchFilter.minPrice = value
+    }
+    
+    func maxPriceChanged(value: Int) {
+        searchFilter.maxPrice = value
+    }
+    
+    func wholeSaleChanged(value: Bool) {
+        searchFilter.wholeSale = value
+    }
+    
+    func shopTypeChanged(type: ShopType) {
+        switch type {
+        case .official:
+            searchFilter.fshop = 0
+            break
+        case .goldMerchant:
+            searchFilter.fshop = 1
+            break
+        case .both:
+            searchFilter.fshop = 2
+            break
+        }
     }
     
 }

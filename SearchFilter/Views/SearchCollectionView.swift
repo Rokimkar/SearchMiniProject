@@ -21,7 +21,8 @@ class SearchCollectionView: UICollectionView {
     init(with frame : CGRect){
         let layout = UICollectionViewFlowLayout.init()
         layout.estimatedItemSize = CGSize.init(width: Constants.screenWidth-40, height: 50)
-        //layout.minimumInteritemSpacing = 10
+        //layout.estimatedItemSize = CGSize.init(width: Constants.screenWidth-40, height: 200)
+        layout.minimumInteritemSpacing = 10
         layout.minimumLineSpacing = 20
         layout.sectionInset = UIEdgeInsetsMake(20, 20, 20, 20)
         super.init(frame: frame, collectionViewLayout: layout)

@@ -45,7 +45,6 @@ class ViewController: UIViewController {
             }else{
                 self.setupSearchCollectionView()
             }
-            
             if let _ = self.searchCollectionView?.searchResults{
                 self.searchCollectionView!.searchResults?.append(contentsOf: productsArray)
             }else{

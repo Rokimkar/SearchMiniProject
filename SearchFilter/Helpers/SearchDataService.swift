@@ -8,7 +8,7 @@
 
 import Foundation
 
-typealias searchDataResponse = (_ data : [TokoProduct],_ isLoadMoreAvailble : Bool) -> Void
+typealias searchDataResponse = (_ data : [TokoProductViewModel],_ isLoadMoreAvailble : Bool) -> Void
 
 class SearchDataSevice{
     
@@ -37,10 +37,16 @@ class SearchDataSevice{
             if searchData.header.totalData > self.start{
                 isLoadMoreAvailable = true
             }
-            success(searchData.data,isLoadMoreAvailable)
+            success(self.getTokoProductViewModels(for: searchData.data),isLoadMoreAvailable)
         }) { (error) in
             failure(error)
         }
         
+    }
+    
+    func getTokoProductViewModels(for models : [TokoProduct]) -> [TokoProductViewModel]{
+        return models.map { (model) in
+            return TokoProductViewModel.init(model: model)
+        }
     }
 }

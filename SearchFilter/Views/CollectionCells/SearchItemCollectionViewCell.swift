@@ -21,11 +21,11 @@ class SearchItemCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
     
-    func bindData(for searchItem : TokoProduct) {
+    func bindData(for searchItem : TokoProductViewModel) {
         itemTitleLabel.text = searchItem.name
         itemPriceLabel.text = searchItem.price
-        RouterManager.sharedInstance.bindImage(for: searchItem.imageUrl ?? "", with: itemImageView)
-        updateImageViewConstraints()
+        RouterManager.sharedInstance.bindImage(for: searchItem.imageUrl, with: itemImageView)
+        //updateImageViewConstraints()
     }
     
     func updateImageViewConstraints(){

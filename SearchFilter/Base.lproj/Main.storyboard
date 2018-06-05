@@ -53,10 +53,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YDF-vf-9aG">
-                                <rect key="frame" x="0.0" y="614" width="375" height="53"/>
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
                                 <color key="backgroundColor" red="0.0014213894358257027" green="0.84432503172588835" blue="0.11690525810634396" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="53" id="TYE-bs-0Mt"/>
+                                    <constraint firstAttribute="height" constant="50" id="TYE-bs-0Mt"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
                                 <state key="normal" title="Filter">
@@ -66,20 +66,31 @@
                                     <action selector="filterButtonPresssed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cnW-d5-lDX"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yYJ-3U-c6Q">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="617"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="YDF-vf-9aG" firstAttribute="top" secondItem="yYJ-3U-c6Q" secondAttribute="bottom" id="BDD-wU-QHt"/>
                             <constraint firstItem="YDF-vf-9aG" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="JSH-6P-Zjv"/>
+                            <constraint firstItem="yYJ-3U-c6Q" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Uaa-Su-HSI"/>
                             <constraint firstItem="YDF-vf-9aG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="VNv-FU-ZEC"/>
+                            <constraint firstItem="yYJ-3U-c6Q" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="X9b-ne-Eba"/>
                             <constraint firstItem="YDF-vf-9aG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kg2-ZG-wph"/>
+                            <constraint firstItem="yYJ-3U-c6Q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ujW-fS-Fw0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="f43-Vb-zjo"/>
+                    <connections>
+                        <outlet property="containerView" destination="yYJ-3U-c6Q" id="tLw-lo-QRQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1514" y="-564"/>
+            <point key="canvasLocation" x="1512.8" y="-564.46776611694156"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="INF-4P-muD">

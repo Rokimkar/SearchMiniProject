@@ -19,7 +19,7 @@ class LoadMoreCollectionViewCell: UICollectionViewCell {
     }
 
     func bindData(){
-        adjustIndicatorConstraint()
+        //adjustIndicatorConstraint()
         loadMoreIndicator.startAnimating()
     }
     

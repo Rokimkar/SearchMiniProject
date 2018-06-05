@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var containerView: UIView!
     var searchCollectionView : SearchCollectionView?
     var searchDataService : SearchDataSevice?
     var query : String?
@@ -22,13 +23,16 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         setupSearchCollectionView()
     }
     
+    
+    
     func setupSearchCollectionView(){
-        let collectionViewFrame = CGRect.init(x: self.view.frame.origin.x, y: self.view.frame.origin.y, width: Constants.screenWidth, height: Constants.screenHeight - 100)
+        let collectionViewFrame = containerView.frame
+        self.containerView.backgroundColor = .gray
         if let _ = searchCollectionView{
             searchCollectionView?.frame = collectionViewFrame
         }else{

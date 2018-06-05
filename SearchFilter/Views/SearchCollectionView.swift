@@ -15,22 +15,22 @@ protocol SearchCollectionViewProtocol {
 class SearchCollectionView: UICollectionView {
     
     var dataDelegate : SearchCollectionViewProtocol?
-    var searchResults : [TokoProduct]?
+    var searchResults : [TokoProductViewModel]?
     var isLoadMore = false
     
     init(with frame : CGRect){
         let layout = UICollectionViewFlowLayout.init()
-        layout.estimatedItemSize = CGSize.init(width: Constants.screenWidth-40, height: 50)
-        //layout.estimatedItemSize = CGSize.init(width: Constants.screenWidth-40, height: 200)
-        layout.minimumInteritemSpacing = 10
-        layout.minimumLineSpacing = 20
-        layout.sectionInset = UIEdgeInsetsMake(20, 20, 20, 20)
+        layout.itemSize = CGSize.init(width: Constants.screenWidth/2 - 6, height: Constants.screenWidth/2 + 50 )
+        //layout.estimatedItemSize = CGSize.init(width: Constants.screenWidth - 12, height: Constants.screenWidth/2 + 40 )
+        layout.minimumInteritemSpacing = 1
+        layout.minimumLineSpacing = 1
+        layout.sectionInset = UIEdgeInsetsMake(5, 5, 5, 5)
         super.init(frame: frame, collectionViewLayout: layout)
         commonInit()
     }
     
     func commonInit(){
-        self.backgroundColor = UIColor.darkGray
+        self.backgroundColor = .gray
         registerViewItems()
         self.dataSource = self
         self.delegate = self
@@ -81,6 +81,6 @@ extension SearchCollectionView : UICollectionViewDataSource,UICollectionViewDele
                 dataDelegate?.loadMoreData()
             }
         }
-        
     }
+    
 }

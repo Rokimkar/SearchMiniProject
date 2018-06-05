@@ -20,20 +20,19 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="h6e-E0-5jG">
-                        <rect key="frame" x="83" y="90.5" width="20" height="20"/>
+                        <rect key="frame" x="166" y="10" width="20" height="20"/>
                         <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </activityIndicatorView>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="h6e-E0-5jG" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="83" id="a7J-yl-9sw"/>
-                <constraint firstItem="h6e-E0-5jG" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="90.5" id="fpQ-jv-g7u"/>
+                <constraint firstAttribute="trailing" secondItem="h6e-E0-5jG" secondAttribute="trailing" id="c4i-fe-t0W"/>
+                <constraint firstItem="h6e-E0-5jG" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="fpQ-jv-g7u"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="186" height="201"/>
             <connections>
                 <outlet property="loadMoreIndicator" destination="h6e-E0-5jG" id="hao-41-EdV"/>
-                <outlet property="xConstraintIndicator" destination="a7J-yl-9sw" id="QmT-BH-Y4V"/>
                 <outlet property="yConstraintIndicator" destination="fpQ-jv-g7u" id="7jb-bF-xv2"/>
             </connections>
             <point key="canvasLocation" x="102" y="129.5"/>

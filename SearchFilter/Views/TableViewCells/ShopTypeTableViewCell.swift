@@ -19,6 +19,22 @@ class ShopTypeTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
+    
+    func bindData(with filter : SearchFilter){
+        if filter.fshop == 2{
+            selectedShopType = .both
+            officialSwitch.isOn = true
+            goldMerchantSwitch.isOn = true
+        }else if filter.fshop == 1{
+            selectedShopType = .goldMerchant
+            officialSwitch.isOn = false
+            goldMerchantSwitch.isOn = true
+        }else if filter.fshop == 0{
+            selectedShopType = .official
+            officialSwitch.isOn = true
+            goldMerchantSwitch.isOn = false
+        }
+    }
 
     @IBAction func goldMerchantSwitchChanged(_ sender: Any) {
         var state = false

@@ -62,6 +62,9 @@ extension FilterTableView : UITableViewDataSource,UITableViewDelegate{
         if indexPath.row == 2{
             let cell = tableView.dequeueReusableCell(withIdentifier: "ShopTypeTableViewCell", for: indexPath) as! ShopTypeTableViewCell
             cell.filterPageDelegate = parentController
+            if let filter = parentController?.searchFilter{
+                cell.bindData(with: filter)
+            }
             cell.selectionStyle = .none
             return cell
         }

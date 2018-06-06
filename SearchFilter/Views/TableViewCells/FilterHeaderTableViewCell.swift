@@ -14,12 +14,17 @@ protocol ButtonPressedProtocol {
 
 class FilterHeaderTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var detailLabel: UILabel!
     var filterPageDelegate : FilterPageProtocol?
     var buttonPressedDelegate : ButtonPressedProtocol?
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    func bindData(detail : String,filter : SearchFilter){
+        self.detailLabel.text = detail
     }
 
     @IBAction func closeButtonPressed(_ sender: Any) {

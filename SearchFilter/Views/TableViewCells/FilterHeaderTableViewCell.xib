@@ -80,6 +80,9 @@
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="detailLabel" destination="JLR-7I-CNa" id="0v7-r2-9vx"/>
+            </connections>
             <point key="canvasLocation" x="-219" y="6"/>
         </tableViewCell>
     </objects>

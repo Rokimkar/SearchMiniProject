@@ -53,14 +53,16 @@ class FilterBodyTableViewCell: UITableViewCell {
     
     func updateMinPriceLabel(value : CGFloat){
         let roundedUpvalue = Int(Int(value/100)*100)
-        let attributedText = NSAttributedString.init(string: "Minimum Price\n Rp \(roundedUpvalue)")
+        let attributedText = NSMutableAttributedString.init(string: "Minimum Price\nRp \(roundedUpvalue)")
+        attributedText.addAttribute(.font, value: UIFont.systemFont(ofSize: 13), range: NSRange.init(location: 0, length: "Minimum Price".count))
         minPriceLabel.attributedText = attributedText
         filterPageDelegate?.minPriceChanged(value: roundedUpvalue)
     }
     
     func updateMaxPriceLabel(value : CGFloat){
         let roundedUpvalue = Int(Int(value/100)*100)
-        let attributedText = NSAttributedString.init(string: "Maximum Price\n Rp \(roundedUpvalue)")
+        let attributedText = NSMutableAttributedString.init(string: "Maximum Price\nRp \(roundedUpvalue)")
+        attributedText.addAttribute(.font, value: UIFont.systemFont(ofSize: 13), range: NSRange.init(location: 0, length: "Maximum Price".count))
         maxPriceLabel.attributedText = attributedText
         filterPageDelegate?.maxPriceChanged(value: roundedUpvalue)
     }

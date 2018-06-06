@@ -14,21 +14,36 @@ protocol FilterChangeProtocol {
 
 class FilterViewController: UIViewController {
     
+    @IBOutlet weak var applyButton: UIButton!
     var filterChangeDelegate : FilterChangeProtocol?
     var searchFilter = SearchFilter()
     var filterTableView : FilterTableView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupFilterTableView()
+        if let _ = filterTableView{
+            
+        }else{
+            setupFilterTableView()
+        }
+        self.view.addSubview(filterTableView!)
         // Do any additional setup after loading the view.
     }
     
-    func setupFilterTableView(){
-        filterTableView = FilterTableView.init(frame: CGRect.init(x: 0, y: 0, width: Constants.screenWidth, height: Constants.screenHeight-85))
-        filterTableView?.parentController = self
-        self.view.addSubview(filterTableView!)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        filterTableView?.reloadData()
+        if filterTableView?.tableType == .shopTypeTable{
+            applyButton.isHidden = true
+        }
     }
+    
+    func setupFilterTableView(){
+        filterTableView = FilterTableView.init(frame: CGRect.init(x: 0, y: 20, width: Constants.screenWidth, height: Constants.screenHeight-105))
+        filterTableView?.parentController = self
+        
+    }
+    
     
     @IBAction func applyButtonClicked(_ sender: Any) {
         filterChangeDelegate?.applyFilterChanges(with: searchFilter)
@@ -45,7 +60,12 @@ class FilterViewController: UIViewController {
 extension FilterViewController : FilterPageProtocol{
     
     func reset() {
-        searchFilter = SearchFilter()
+        if filterTableView?.tableType == .shopTypeTable{
+            searchFilter.fshop = 2
+            searchFilter.official = true
+        }else{
+            searchFilter = SearchFilter()
+        }
         filterTableView?.reloadData()
     }
     
@@ -61,17 +81,15 @@ extension FilterViewController : FilterPageProtocol{
         searchFilter.wholeSale = value
     }
     
-    func shopTypeChanged(type: ShopType) {
-        switch type {
-        case .official:
-            searchFilter.fshop = 0
-            break
-        case .goldMerchant:
-            searchFilter.fshop = 1
-            break
-        case .both:
+    func officialShopTypeChanged(isSelected: Bool) {
+        searchFilter.official = isSelected
+    }
+    
+    func goldMerchantChanged(isSelected : Bool){
+        if isSelected == true{
             searchFilter.fshop = 2
-            break
+        }else{
+            searchFilter.fshop = 0
         }
     }
     

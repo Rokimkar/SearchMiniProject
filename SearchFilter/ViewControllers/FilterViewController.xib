@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FilterViewController" customModule="SearchFilter" customModuleProvider="target">
             <connections>
+                <outlet property="applyButton" destination="r15-Jw-zCR" id="J6L-hD-zFO"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

@@ -22,47 +22,63 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iPS-x2-n5I">
                         <rect key="frame" x="0.0" y="20" width="394" height="119.5"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5D-uL-urt">
+                                <rect key="frame" x="369" y="8" width="15" height="26.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <color key="textColor" red="0.0014213894359999999" green="0.84432503169999995" blue="0.11690525810000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gold Merchant" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TnW-2Z-gNd">
-                                <rect key="frame" x="254" y="9.5" width="114" height="21"/>
+                                <rect key="frame" x="254" y="44.5" width="114" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="C7l-9I-FaQ"/>
                                     <constraint firstAttribute="width" constant="114" id="Wzs-a5-fX7"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Official store" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qlD-YJ-gYx">
-                                <rect key="frame" x="26" y="9.5" width="98" height="21"/>
+                                <rect key="frame" x="8" y="44.5" width="98" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="mqh-Qg-QfD"/>
                                     <constraint firstAttribute="width" constant="98" id="yo6-Ei-fBS"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C8e-SY-0hc">
-                                <rect key="frame" x="26" y="60" width="51" height="31"/>
-                                <connections>
-                                    <action selector="officialStoreSwitchChanged:" destination="KGk-i7-Jjw" eventType="valueChanged" id="88l-wV-xSZ"/>
-                                </connections>
-                            </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ayr-F9-ElJ">
-                                <rect key="frame" x="319" y="60" width="51" height="31"/>
+                                <rect key="frame" x="319" y="75.5" width="51" height="31"/>
                                 <connections>
                                     <action selector="goldMerchantSwitchChanged:" destination="KGk-i7-Jjw" eventType="valueChanged" id="IkZ-DL-1Og"/>
                                 </connections>
                             </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C8e-SY-0hc">
+                                <rect key="frame" x="26" y="75.5" width="51" height="31"/>
+                                <connections>
+                                    <action selector="officialStoreSwitchChanged:" destination="KGk-i7-Jjw" eventType="valueChanged" id="88l-wV-xSZ"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shop Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A9I-82-J19">
+                                <rect key="frame" x="8" y="10" width="82" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="qlD-YJ-gYx" firstAttribute="leading" secondItem="iPS-x2-n5I" secondAttribute="leading" constant="26" id="17g-uZ-TPv"/>
+                            <constraint firstItem="qlD-YJ-gYx" firstAttribute="leading" secondItem="iPS-x2-n5I" secondAttribute="leading" constant="8" id="17g-uZ-TPv"/>
+                            <constraint firstAttribute="trailing" secondItem="s5D-uL-urt" secondAttribute="trailing" constant="10" id="4N5-gC-Jm5"/>
                             <constraint firstAttribute="trailing" secondItem="ayr-F9-ElJ" secondAttribute="trailing" constant="26" id="7IP-Tq-b50"/>
-                            <constraint firstItem="C8e-SY-0hc" firstAttribute="top" secondItem="qlD-YJ-gYx" secondAttribute="bottom" constant="29.5" id="B7X-eo-Yv6"/>
-                            <constraint firstItem="qlD-YJ-gYx" firstAttribute="centerY" secondItem="iPS-x2-n5I" secondAttribute="centerY" constant="-40" id="Teg-i6-Bfc"/>
-                            <constraint firstItem="TnW-2Z-gNd" firstAttribute="centerY" secondItem="iPS-x2-n5I" secondAttribute="centerY" constant="-40" id="Vwx-YB-iCV"/>
-                            <constraint firstItem="ayr-F9-ElJ" firstAttribute="top" secondItem="TnW-2Z-gNd" secondAttribute="bottom" constant="29.5" id="atq-7T-8ou"/>
+                            <constraint firstItem="C8e-SY-0hc" firstAttribute="top" secondItem="qlD-YJ-gYx" secondAttribute="bottom" constant="10" id="B7X-eo-Yv6"/>
+                            <constraint firstItem="TnW-2Z-gNd" firstAttribute="top" secondItem="s5D-uL-urt" secondAttribute="bottom" constant="10" id="Mdf-3w-Z0x"/>
+                            <constraint firstItem="qlD-YJ-gYx" firstAttribute="centerY" secondItem="iPS-x2-n5I" secondAttribute="centerY" constant="-5" id="Teg-i6-Bfc"/>
+                            <constraint firstItem="TnW-2Z-gNd" firstAttribute="centerY" secondItem="iPS-x2-n5I" secondAttribute="centerY" constant="-5" id="Vwx-YB-iCV"/>
+                            <constraint firstItem="ayr-F9-ElJ" firstAttribute="top" secondItem="TnW-2Z-gNd" secondAttribute="bottom" constant="10" id="atq-7T-8ou"/>
+                            <constraint firstItem="A9I-82-J19" firstAttribute="top" secondItem="iPS-x2-n5I" secondAttribute="top" constant="10" id="cUT-vU-ohx"/>
+                            <constraint firstItem="A9I-82-J19" firstAttribute="leading" secondItem="iPS-x2-n5I" secondAttribute="leading" constant="8" id="eIK-2W-vyj"/>
                             <constraint firstAttribute="trailing" secondItem="TnW-2Z-gNd" secondAttribute="trailing" constant="26" id="pIP-9G-g02"/>
                             <constraint firstItem="C8e-SY-0hc" firstAttribute="leading" secondItem="iPS-x2-n5I" secondAttribute="leading" constant="26" id="s5j-DA-CTC"/>
                         </constraints>

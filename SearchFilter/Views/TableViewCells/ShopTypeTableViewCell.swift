@@ -11,7 +11,6 @@ import UIKit
 class ShopTypeTableViewCell: UITableViewCell {
 
     var filterPageDelegate : FilterPageProtocol?
-    var selectedShopType : ShopType = .both
     
     @IBOutlet weak var officialSwitch: UISwitch!
     @IBOutlet weak var goldMerchantSwitch: UISwitch!
@@ -21,17 +20,10 @@ class ShopTypeTableViewCell: UITableViewCell {
     }
     
     func bindData(with filter : SearchFilter){
+        officialSwitch.isOn = filter.official
         if filter.fshop == 2{
-            selectedShopType = .both
-            officialSwitch.isOn = true
             goldMerchantSwitch.isOn = true
-        }else if filter.fshop == 1{
-            selectedShopType = .goldMerchant
-            officialSwitch.isOn = false
-            goldMerchantSwitch.isOn = true
-        }else if filter.fshop == 0{
-            selectedShopType = .official
-            officialSwitch.isOn = true
+        }else{
             goldMerchantSwitch.isOn = false
         }
     }
@@ -40,44 +32,15 @@ class ShopTypeTableViewCell: UITableViewCell {
         var state = false
         if let switchState = sender as? UISwitch{
             state = switchState.isOn
-            if state == false && selectedShopType == .both{
-                selectedShopType = .official
-            }else{
-                selectedShopType = .both
-            }
-            filterPageDelegate?.shopTypeChanged(type: selectedShopType)
+            filterPageDelegate?.goldMerchantChanged(isSelected: state)
         }
-        setSwitchState()
     }
     
     @IBAction func officialStoreSwitchChanged(_ sender: Any) {
         var state = false
         if let switchState = sender as? UISwitch{
             state = switchState.isOn
-            if state == false && selectedShopType == .both{
-                selectedShopType = .goldMerchant
-            }else{
-                selectedShopType = .both
-            }
-            filterPageDelegate?.shopTypeChanged(type: selectedShopType)
-        }
-        setSwitchState()
-    }
-    
-    func setSwitchState(){
-        switch selectedShopType {
-        case .official:
-            officialSwitch.isOn = true
-            goldMerchantSwitch.isOn = false
-            break
-        case .goldMerchant:
-            officialSwitch.isOn = false
-            goldMerchantSwitch.isOn = true
-            break
-        case .both:
-            officialSwitch.isOn = true
-            goldMerchantSwitch.isOn = true
-            break
+            filterPageDelegate?.officialShopTypeChanged(isSelected: state)
         }
     }
     
